@@ -1,0 +1,79 @@
+body {
+    background-color: #192414;
+    margin: 0 auto;
+    text-align: center;
+    
+    color: #222222;
+    font-weight: bold;
+}
+#contenedor {
+    
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #808080;
+    box-shadow: 0px 0px 10px #808080;
+    -moz-box-shadow: 0px 0px 10px #808080;
+    -webkit-box-shadow: 0px 0px 10px #808080;
+    background-color: #f5f5f5;
+    background-image: url(http://fotos.subefotos.com/8039be2730f83a11f2c9b34c4d97bcc8o.png);
+    background-repeat: no-repeat;
+    padding-top: 220px;
+}
+input {
+    box-shadow: 0px 0px 2px #192414;
+    -moz-box-shadow: 0px 0px 2px #192414;
+    -webkit-box-shadow: 0px 0px 2px #192414;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    
+
+}
+
+
+#d1 {
+    
+    
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 20px
+}
+
+#d2 {
+margin: 20px;
+
+    
+}
+.grid {
+    background-color: #fcfcfc;
+    border: 1px solid #222222;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #808080;
+    margin: 0 auto;
+    font-weight: normal;
+    box-shadow: 0px 0px 10px #808080;
+    -moz-box-shadow: 0px 0px 10px #808080;
+    -webkit-box-shadow: 0px 0px 10px #808080;
+}
+
+.grid th, .grid td {
+    border: 1px solid #858787;
+    padding: 0px 10px;
+    outline: none;
+}
+
+.head {
+    background-color: #3c8cc4;
+    border: 1px solid #222222;
+    font-weight: bold;
+}
+
+.head a, .head:visited {
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+.alt {
+    background-color: #f1f3f5;
+}

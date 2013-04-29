@@ -1,0 +1,55 @@
+﻿@{
+    var db=Database.Open("globalazuremed");
+    if(IsPost)    {
+        var insert="insert into asistentes (Nombre,Apellidos,Correo) values ('" + Request["Nombre"] +"','" + Request["Apellidos"] +"','" + Request["Correo"] +"')";
+
+        db.Execute(insert);
+    }
+    var consulta="select * from asistentes";
+    var data=db.Query(consulta);
+    var grid=new WebGrid(data,canPage:true,rowsPerPage:3);
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Global Azure</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="@Href("Style.css")" />
+    </head>
+    <body>
+        <form method="post">
+            <div id="contenedor">
+                <div id="d1">
+                    <h1>Asistentes</h1>
+                    <label>Nombre</label>
+                    <input name="Nombre" /><br />
+
+
+                    <label>Apellidos</label>
+                    <input name="Apellidos" /><br />
+
+                    <label>Correo</label>
+                    <input name="Correo" /><br />
+
+
+                    <input type="submit" />
+                </div>
+
+                <div id="d2">
+                    @grid.GetHtml(
+               tableStyle:"grid",headerStyle:"head",alternatingRowStyle:"alt"
+
+               
+               )
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </body>
+</html>
